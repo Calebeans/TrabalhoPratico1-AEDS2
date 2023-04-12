@@ -13,7 +13,7 @@ public class Main {
                     Funcoes.instancias();
                     int escolhaInstancia = 0;
                     escolhaInstancia = s.nextInt();
-                    Funcoes.escolhaInstancias(escolhaInstancia);
+                    Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao);
 
                     break;
 
@@ -21,7 +21,7 @@ public class Main {
                     Funcoes.instancias();
                     int escolhaInstancia1 = 0;
                     escolhaInstancia1 = s.nextInt();
-                    Funcoes.escolhaInstancias(escolhaInstancia1);
+                    Funcoes.escolhaInstancias(escolhaInstancia1, escolhaFuncao);
                     break;
 
                 case 3:

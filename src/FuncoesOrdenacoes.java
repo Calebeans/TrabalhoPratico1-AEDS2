@@ -1,5 +1,5 @@
 public class FuncoesOrdenacoes {
-    public static void bubbleSort(String lista[], int tam) {
+    public static int bubbleSort(String lista[], int tam) {
         String aux;
         int troca;
         int cont = 0;
@@ -11,14 +11,14 @@ public class FuncoesOrdenacoes {
                     lista[j] = lista[j-1];
                     lista[j-1] = aux;
                     troca = 1;
-                    cont ++;
+                    cont++;
                 }
             }
             if (troca == 0){
                 break;
             }
         }
-        System.out.println("Trocas: " + cont + "\n");
+        return cont;
     }
 
     public static void shellSort(String v[], int n){
