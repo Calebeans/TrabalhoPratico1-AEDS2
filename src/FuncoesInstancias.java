@@ -184,7 +184,7 @@ public class FuncoesInstancias {
 
     public static void listaAleatoria1000(int escolhaInstancia, int escolha, Contador c){
         int tamanho = 1000;
-        String vecto[] = new String[tamanho];
+        int vecto[] = new int[tamanho];
         int vectorInt[] = new int[tamanho];
         long tempoTotal = 0;
         Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaAleatoria-1000.txt");
@@ -193,13 +193,13 @@ public class FuncoesInstancias {
         try {
             List<String> linhas = Files.readAllLines(arquivo);
             for (String linha : linhas) {
-                vecto[i++] = linha;
+                vecto[i++] = Integer.parseInt(linha);
             }
         }catch (Exception e){
             System.out.println("Erro");
         }
 
-        tempoTotal = Funcoes.funcoesArquivos(escolha, vecto, tamanho, c);
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
 
         System.out.println("\nOrdenado");
         for (int j = 0; j < tamanho; j++){
@@ -209,5 +209,411 @@ public class FuncoesInstancias {
         c.tempoExecucao = tempoTotal;
     }
 
+    public static void listaAleatoria10000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 10000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaAleatoria-10000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void listaAleatoria100000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 100000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaAleatoria-100000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void listaAleatoria1000000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaAleatoria-1000000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaInversamenteOrdenada1000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaInversamenteOrdenada-1000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaInversamenteOrdenada10000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 10000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaInversamenteOrdenada-10000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaInversamenteOrdenada100000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 100000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaInversamenteOrdenada-100000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaInversamenteOrdenada1000000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaInversamenteOrdenada-1000000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaOrdenada1000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaOrdenada-1000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaOrdenada10000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 10000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaOrdenada-10000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaOrdenada100000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 100000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaOrdenada-100000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaOrdenada1000000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaOrdenada-1000000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+
+    public static void ListaQuaseOrdenada1000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaQuaseOrdenada-1000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+
+    public static void ListaQuaseOrdenada10000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 10000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaQuaseOrdenada-10000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaQuaseOrdenada100000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 100000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaQuaseOrdenada-100000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
+
+    public static void ListaQuaseOrdenada1000000(int escolhaInstancia, int escolha, Contador c){
+        int tamanho = 1000000;
+        int vecto[] = new int[tamanho];
+        int vectorInt[] = new int[tamanho];
+        long tempoTotal = 0;
+        Path arquivo = Paths.get("C:/Users/Calebe/Documents/GitHub/TrabalhoOrdenacao/Arquivos/Instâncias-TP1/ListaQuaseOrdenada-1000000.txt");
+        int i =0;
+
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+            for (String linha : linhas) {
+                vecto[i++] = Integer.parseInt(linha);
+            }
+        }catch (Exception e){
+            System.out.println("Erro");
+        }
+
+        tempoTotal = Funcoes.funcoesArquivosInt(escolha, vecto, tamanho, c);
+
+        System.out.println("\nOrdenado");
+        for (int j = 0; j < tamanho; j++){
+            System.out.println(vecto[j]);
+        }
+
+        c.tempoExecucao = tempoTotal;
+    }
 
 }

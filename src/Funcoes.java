@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 class Contador{
-    long contTrocas;
-    long contComparações;
-    long tempoExecucao;
+    double contTrocas;
+    double contComparações;
+    double tempoExecucao;
 }
 public class Funcoes {
 
@@ -68,6 +68,51 @@ public class Funcoes {
             case 7:
                 FuncoesInstancias.listaAleatoria1000(escolhaInstancia, escolhaFuncao, c);
                 break;
+            case 8:
+                FuncoesInstancias.listaAleatoria10000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 9:
+                FuncoesInstancias.listaAleatoria100000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 10:
+                FuncoesInstancias.listaAleatoria1000000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 11:
+                FuncoesInstancias.ListaInversamenteOrdenada1000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 12:
+                FuncoesInstancias.ListaInversamenteOrdenada10000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 13:
+                FuncoesInstancias.ListaInversamenteOrdenada100000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 14:
+                FuncoesInstancias.ListaInversamenteOrdenada1000000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 15:
+                FuncoesInstancias.ListaOrdenada1000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 16:
+                FuncoesInstancias.ListaOrdenada10000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 17:
+                FuncoesInstancias.ListaOrdenada100000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 18:
+                FuncoesInstancias.ListaOrdenada1000000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 19:
+                FuncoesInstancias.ListaQuaseOrdenada1000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 20:
+                FuncoesInstancias.ListaQuaseOrdenada10000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 21:
+                FuncoesInstancias.ListaQuaseOrdenada100000(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 22:
+                FuncoesInstancias.ListaQuaseOrdenada1000000(escolhaInstancia, escolhaFuncao, c);
+                break;
         }
     }
 
@@ -121,7 +166,59 @@ public class Funcoes {
                 tempoTotal = tempoFinal - tempoInicial;
                 break;
         }
+        return tempoTotal;
+    }
 
+    public static long funcoesArquivosInt(int escolha, int[] vecto, int tamanho, Contador c){
+        long tempoTotal = 0;
+        long tempoInicial = 0;
+        long tempoFinal = 0;
+        int i = 0;
+        int vectoAux[] = new int[tamanho];
+        c.contTrocas = 0;
+        c.contComparações = 0;
+        int aux = 0;
+        switch (escolha){
+            case 1:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.bubbleSortInt(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+
+            case 2:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.shellSortInt(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+
+            case 3:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.selectionSortInt(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+
+            case 4:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.insertionSortInt(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+            case 5:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.quickSortInt(vecto, 0, tamanho-1, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+            case 6:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.mergeSortInt(vecto, vectoAux, 0, tamanho-1, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+        }
         return tempoTotal;
     }
 
