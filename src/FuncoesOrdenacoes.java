@@ -1,7 +1,7 @@
 public class FuncoesOrdenacoes {
     public static void bubbleSort(String lista[], int tam, Contador c) {
         int troca;
-        int contComp = 0, contTroca = 0;
+        long contComp = 0, contTroca = 0;
             String aux;
 
             for (int i = 0; i < tam - 1; i++) {
@@ -26,7 +26,7 @@ public class FuncoesOrdenacoes {
 
     public static void bubbleSortInt(int lista[], int tam, Contador c) {
         int troca;
-        int contComp = 0, contTroca = 0;
+        long contComp = 0, contTroca = 0;
         int aux;
 
         for (int i = 0; i < tam - 1; i++) {
@@ -51,7 +51,7 @@ public class FuncoesOrdenacoes {
 
     public static void shellSort(String v[], int n, Contador c){
         int h, i, j;
-        int contComp = 0, contTroca = 0;
+        long contComp = 0, contTroca = 0;
         String x;
 
         for (h = 1; h < n; h = 3*h+1);
@@ -78,7 +78,7 @@ public class FuncoesOrdenacoes {
 
     public static void shellSortInt(int v[], int n, Contador c){
         int h, i, j;
-        int contComp = 0, contTroca = 0;
+        long contComp = 0, contTroca = 0;
         int x;
 
         for (h = 1; h < n; h = 3*h+1);
@@ -106,7 +106,7 @@ public class FuncoesOrdenacoes {
     public static void selectionSort(String lista[], int n , Contador c) {
         int min;
         String aux;
-        int contComp = 0, contTroca = 0;
+        long contComp = 0, contTroca = 0;
 
         for (int i = 0; i <n-1; i++){
             min = i;
@@ -129,7 +129,7 @@ public class FuncoesOrdenacoes {
     public static void selectionSortInt(int lista[], int n , Contador c) {
         int min;
         int aux;
-        int contComp = 0, contTroca = 0;
+        long contComp = 0, contTroca = 0;
 
         for (int i = 0; i <n-1; i++){
             min = i;
@@ -151,7 +151,8 @@ public class FuncoesOrdenacoes {
 
     public static void insertionSort(String lista[], int n, Contador c){
         String chave;
-        int j, contTroca = 0, contComp = 0;
+        int j;
+        long contTroca = 0, contComp = 0;
 
         for (int i = 1; i < n; i++){
             chave = lista[i];
@@ -173,7 +174,8 @@ public class FuncoesOrdenacoes {
 
     public static void insertionSortInt(int lista[], int n, Contador c){
         int chave;
-        int j, contTroca = 0, contComp = 0;
+        int j;
+        long contTroca = 0, contComp = 0;
 
         for (int i = 1; i < n; i++){
             chave = lista[i];
@@ -197,7 +199,7 @@ public class FuncoesOrdenacoes {
         int i = esquerda, j = direita, central = (esquerda + direita)/2;
         String pivo, tmp;
         pivo = lista[central];
-        int contTroca = 0, contComp = 0;
+        long contTroca = 0, contComp = 0;
 
         while (i <= j) {
             contComp++;
@@ -236,7 +238,7 @@ public class FuncoesOrdenacoes {
         int i = esquerda, j = direita, central = (esquerda + direita)/2;
         int pivo, tmp;
         pivo = lista[central];
-        int contTroca = 0, contComp = 0;
+        long contTroca = 0, contComp = 0;
 
         while (i <= j) {
             contComp++;

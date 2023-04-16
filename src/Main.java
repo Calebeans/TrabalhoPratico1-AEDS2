@@ -1,6 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
                     Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao,c);
                     System.out.println("Trocas1: " + c.contTrocas);
                     System.out.println("Comparações1: " + c.contComparações);
-                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " milisegundos");
+                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " segundos");
                     break;
 
                 case 2:
@@ -32,7 +33,7 @@ public class Main {
                     Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao,c);
                     System.out.println("Trocas1: " + c.contTrocas);
                     System.out.println("Comparações1: " + c.contComparações);
-                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " milisegundos");
+                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " segundos");
                     break;
 
                 case 3:
@@ -41,7 +42,7 @@ public class Main {
                     Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao,c);
                     System.out.println("Trocas1: " + c.contTrocas);
                     System.out.println("Comparações1: " + c.contComparações);
-                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " milisegundos");
+                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " segundos");
                     break;
                 case 4:
                     Funcoes.instancias();
@@ -49,7 +50,7 @@ public class Main {
                     Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao,c);
                     System.out.println("Trocas1: " + c.contTrocas);
                     System.out.println("Comparações1: " + c.contComparações);
-                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " milisegundos");
+                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " segundos");
                     break;
                 case 5:
                     Funcoes.instancias();
@@ -57,7 +58,7 @@ public class Main {
                     Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao,c);
                     System.out.println("Trocas1: " + c.contTrocas);
                     System.out.println("Comparações1: " + c.contComparações);
-                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " milisegundos");
+                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " segundos");
                     break;
                 case 6:
                     Funcoes.instancias();
@@ -65,7 +66,7 @@ public class Main {
                     Funcoes.escolhaInstancias(escolhaInstancia, escolhaFuncao,c);
                     System.out.println("Trocas: " + c.contTrocas);
                     System.out.println("Comparações: " + c.contComparações);
-                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " milisegundos");
+                    System.out.println("Tempo: " + c.tempoExecucao/1000 + " segundos");
                     break;
             }
 

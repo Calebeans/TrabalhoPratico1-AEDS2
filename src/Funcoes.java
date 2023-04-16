@@ -1,9 +1,9 @@
-import java.util.Scanner;
+import java.math.BigInteger;;
 
 class Contador{
-    double contTrocas;
-    double contComparações;
-    double tempoExecucao;
+    long  contTrocas;
+    long  contComparações;
+    long tempoExecucao;
 }
 public class Funcoes {
 
