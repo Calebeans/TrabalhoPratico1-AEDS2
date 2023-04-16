@@ -1,4 +1,10 @@
 import java.util.Scanner;
+
+class Contador{
+    long contTrocas;
+    long contComparações;
+    long tempoExecucao;
+}
 public class Funcoes {
 
     public static void menu(){
@@ -39,76 +45,84 @@ public class Funcoes {
         System.out.println("0-Sair");
     }
 
-    public static void escolhaInstancias(int escolhaInstancia, int escolhaFuncao){
+    public static void escolhaInstancias(int escolhaInstancia, int escolhaFuncao, Contador c){
         switch (escolhaInstancia){
             case 1:
-                FuncoesInstancias.dicionarioAleatorio(escolhaFuncao);
+                FuncoesInstancias.dicionarioAleatorio29855(escolhaInstancia, escolhaFuncao, c);
                 break;
             case 2:
-                FuncoesInstancias.dicionarioAleatorio2();
+                FuncoesInstancias.dicionarioAleatorio261791(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 3:
+                FuncoesInstancias.dicionarioInversamenteOrdenado29855(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 4:
+                FuncoesInstancias.dicionarioInversamenteOrdenado261791(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 5:
+                FuncoesInstancias.dicionarioOrdenado261791(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 6:
+                FuncoesInstancias.dicionarioOrdenado29855(escolhaInstancia, escolhaFuncao, c);
+                break;
+            case 7:
+                FuncoesInstancias.listaAleatoria1000(escolhaInstancia, escolhaFuncao, c);
                 break;
         }
     }
 
-    public static long funcoesArquivos(int escolha, String[] vecto, int comparacoes){
+    public static long funcoesArquivos(int escolha, String[] vecto, int tamanho, Contador c){
         long tempoTotal = 0;
-        int aux;
+        long tempoInicial = 0;
+        long tempoFinal = 0;
+        int i = 0;
+        String vectoAux[] = new String[tamanho];
+        c.contTrocas = 0;
+        c.contComparações = 0;
+        int aux = 0;
         switch (escolha){
             case 1:
-                long tempoInicial = System.currentTimeMillis();
-                aux = FuncoesOrdenacoes.bubbleSort(vecto, 29855);
-                long tempoFinal = System.currentTimeMillis();
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.bubbleSort(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+
+            case 2:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.shellSort(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+
+            case 3:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.selectionSort(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+
+            case 4:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.insertionSort(vecto, tamanho, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+            case 5:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.quickSort(vecto, 0, tamanho-1, c);
+                tempoFinal = System.currentTimeMillis();
+                tempoTotal = tempoFinal - tempoInicial;
+                break;
+            case 6:
+                tempoInicial = System.currentTimeMillis();
+                FuncoesOrdenacoes.mergeSort(vecto, vectoAux, 0, tamanho-1, c);
+                tempoFinal = System.currentTimeMillis();
                 tempoTotal = tempoFinal - tempoInicial;
                 break;
         }
 
         return tempoTotal;
-    }
-
-
-    public static void escolha(){
-        int escolhaInstancia = 0;
-
-        String vecto[] = new String[29855];
-
-        //FuncoesInstancias.dicionarioAleatorio();
-
-            Funcoes.instancias();
-            Scanner s = new Scanner(System.in);
-            escolhaInstancia = s.nextInt();
-            switch (escolhaInstancia){
-                case 1:
-
-                    break;
-
-                case 2:
-                    long tempoInicial1 = System.currentTimeMillis();
-                    FuncoesOrdenacoes.shellSort(vecto, 29855);
-                    long tempoFinal1 = System.currentTimeMillis();
-
-                    System.out.println("Ordenado\n");
-                    for (int k = 0; k < 29855; k++){
-                        System.out.println(vecto[k]);
-                    }
-
-                    System.out.println("\nTempo: " + (tempoFinal1 - tempoInicial1)/1000 + " segundos\n");
-                    break;
-
-                case 3:
-                    long tempoInicial2 = System.currentTimeMillis();
-                    FuncoesOrdenacoes.selectionSort(vecto, 29855);
-                    long tempoFinal2 = System.currentTimeMillis();
-
-                    System.out.println("Ordenado\n");
-                    for (int k = 0; k < 29855; k++){
-                        System.out.println(vecto[k]);
-                    }
-
-                    System.out.println("\nTempo: " + (tempoFinal2 - tempoInicial2)/1000 + " segundos\n");
-                    break;
-            }
-
-
     }
 
 }
